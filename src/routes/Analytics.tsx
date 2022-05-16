@@ -54,7 +54,7 @@ function AnalyticsDisplay({ content }: { content: Content }) {
           {content.type.replace("_", " ")}
         </div>
         <h1 className="text-4xl font-bold">
-          Analysis results for <b className="text-primary">{content.name}</b>{" "}
+          Analytics pour <b className="text-primary">{content.name}</b>{" "}
         </h1>
       </section>
       <Routes>

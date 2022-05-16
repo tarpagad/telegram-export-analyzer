@@ -18,13 +18,13 @@ function Home() {
           },
           Err(err): Option<string> {
             if (err.type === "NoFileSelected") {
-              return new Some("No file selected. Please select a file.");
+              return new Some("Aucun fichier sélectionné. Veuillez sélectionner un fichier.");
             } else if (err.type === "FailedToParseFile") {
               return new Some(
-                "Failed to parse file. Please check the file format."
+                "Échec de l'analyse du fichier. Veuillez vérifier le format du fichier."
               );
             } else {
-              return new Some("Something went wrong. Please try again.");
+              return new Some("Quelque chose s'est mal passé. Veuillez réessayer.");
             }
           },
         });
@@ -37,11 +37,10 @@ function Home() {
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content text-center">
           <div className="max-w-2xl">
-            <h1 className="text-5xl font-bold">What does this website do?</h1>
+            <h1 className="text-5xl font-bold">A quoi sert ce site web ?</h1>
             <p className="py-6">
-              This website takes the data from the Telegram export file and
-              analyzes it. It shows information like a rank of people in a
-              Telegram group sorted by how many messages they have sent.
+              Ce site Web prend les données du fichier d'exportation Telegram et
+              l'analyse. Il affiche des informations comme un classement des membres dans un groupe de télégrammes trié en fonction du nombre de messages qu'ils ont envoyés.
             </p>
             <div className="card-body">
               {errorMessage
